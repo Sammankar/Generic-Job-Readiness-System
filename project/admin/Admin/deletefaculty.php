@@ -1,0 +1,1 @@
+<?phpinclude_once 'connection.php';$sql = "DELETE FROM tbl_user WHERE users_id='" . $_GET["users_id"] . "'";if (mysqli_query($conn, $sql)) {    // echo "Record deleted successfully";    header("location: viewfaculty.php");} else {    echo "Error deleting record: " . mysqli_error($conn);}mysqli_close($conn);?>
